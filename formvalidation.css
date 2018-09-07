@@ -1,0 +1,34 @@
+.form-group {
+  position: relative;
+	margin: 20px 0 0 0;
+}
+
+.form-control {
+  padding-right: 30px;
+}
+
+.input-glyph {
+  position: absolute;
+  color: green;
+  right: 10px;
+  pointer-events: none;
+  top: 10px;
+  display: none;
+}
+form:not(.form-inline) label ~ .input-glyph {
+  top: 34px;
+}
+
+.form-control.valid ~ .input-glyph,
+.form-control.valid:invalid ~ .input-glyph {
+  display: block;
+}
+
+.form-control.valid ~ .input-glyph {
+  display: block;
+}
+
+.form-control.valid:invalid ~ .input-glyph {
+  display: none;
+}
+

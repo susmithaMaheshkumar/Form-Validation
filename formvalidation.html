@@ -1,0 +1,38 @@
+<div class="container">
+	<form name="user-registration-form" onsubmit="return validateForm(this);">
+		<div class="row">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" id="firstName" class="form-control" autocomplete="false" required title="First name is required." oninput="return validateRequired(this);" onchange="return validateRequired(this);">
+                <i class="input-glyph glyphicon glyphicon-ok-circle"></i>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName" class="form-control" autocomplete="false" required title="Last name is required." oninput="return validateRequired(this);" onchange="return validateRequired(this);">
+                <i class="input-glyph glyphicon glyphicon-ok-circle"></i>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" class="form-control" autocomplete="false" required pattern="^.{0,64}$" title="Enter an email address with a maximum of 64 characters." oninput="validateEmail(this);" onchange="validateEmail(this);">
+                <i class="input-glyph glyphicon glyphicon-ok-circle"></i>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control" autocomplete="false" required pattern="^((?=.*[0-9])(?=.*[a-zA-Z])).{6,12}$" title="Enter a password between 6 and 12 characters, containing at least one letter and one number." oninput="validatePassword(this);" onchange="validatePassword(this);">
+                <i class="input-glyph glyphicon glyphicon-ok-circle"></i>
+                <p class="help-block">Passwords must be between 6 and 12 characters long, containing at least one letter and one number. Please note, passwords are case sensitive.
+            </div>
+            <div class="form-group">
+                <label for="passwordConfirm">Confirm Password</label>
+                <input type="password" name="passwordConfirm" id="passwordConfirm" class="form-control" autocomplete="false" required pattern="^((?=.*[0-9])(?=.*[a-zA-Z])).{6,12}$" title="Passwords must match." oninput="validatePassword(this);" onchange="validatePassword(this);">
+                <i class="input-glyph glyphicon glyphicon-ok-circle"></i>
+                </p>
+            </div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<button type="submit" class="btn btn-primary pull-right">Next</button>
+			</div>
+		</div>
+	</form>
+</div>
